@@ -51,7 +51,7 @@ func convertToSymDense(m *mat.Dense) *mat.SymDense {
 
 	// Create full n×n data array
 	data := make([]float64, r*r) // Changed from r*(r+1)/2
-	
+
 	// Copy all matrix elements (not just upper triangle)
 	for i := 0; i < r; i++ {
 		for j := 0; j < r; j++ {

@@ -15,11 +15,11 @@ func TestEye(t *testing.T) {
 }
 
 func TestStandardNormal(t *testing.T) {
-  g := StandardNormal(2)
-  expected := eye(2) 
-  if !mat.EqualApprox(g.Cov, expected, 1e-12) {
-    t.Errorf("StandardNormal = %v, want %v", g.Cov, expected)
-  }
+	g := StandardNormal(2)
+	expected := eye(2)
+	if !mat.EqualApprox(g.Cov, expected, 1e-12) {
+		t.Errorf("StandardNormal = %v, want %v", g.Cov, expected)
+	}
 }
 
 func TestJointGaussian(t *testing.T) {
@@ -30,7 +30,7 @@ func TestJointGaussian(t *testing.T) {
 	r, c := g1.Cov.Dims()
 	fmt.Printf("g1 cov dims: %v %v\n", r, c)
 	g3 := JointGaussian(g1, g2)
-	expected := eye(5) 
+	expected := eye(5)
 	if !mat.EqualApprox(g3.Cov, expected, 1e-12) {
 		t.Errorf("JointGaussian = %v, want %v", g3.Cov, expected)
 	}
