@@ -1,4 +1,4 @@
-module gossian
+module github.com/TimEvans/gossian
 
 go 1.25.0
 
